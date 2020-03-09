@@ -13,10 +13,7 @@ namespace DVDeploymentDemo.Models
        
 
         [Display(Name = "Completed On")]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime? CompletedOn;
-
+        public  DateTime?  CompletedOn { get; set; }
         #endregion
 
     }
