@@ -1,0 +1,53 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Demo";
+}
+
+    <div class="text-center">
+        <h2>Deployment Demo</h2>
+        <image height="100" width="100" src="img/deploymentdemo.png" />
+        <br />
+        <br />
+        <h3>Task List</h3>
+        <br />
+        <table style="text-align:left" class="table">
+            <thead>
+                <tr>
+
+                    <th>
+                        Task
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <!--
+                <th>
+                    Completed On
+                </th>
+                -->
+
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model.ToDoItems)
+                {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <br />
+        
+    </div>
